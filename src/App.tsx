@@ -199,13 +199,13 @@ function App() {
 
               <div className="grid grid-cols-2 gap-3 mb-3">
                 <div className="bg-emerald-50 border-2 border-emerald-200 rounded-xl p-3">
-                  <p className="text-xs text-emerald-700 font-medium mb-1">Big House</p>
+                  <p className="text-xs text-emerald-700 font-medium mb-1">Big House (Unit 10)</p>
                   <p className="text-lg font-bold text-emerald-800">
                     ${electricityResults.totalBillBigHouse.toFixed(2)}
                   </p>
                 </div>
                 <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-3">
-                  <p className="text-xs text-blue-700 font-medium mb-1">Tiny House</p>
+                  <p className="text-xs text-blue-700 font-medium mb-1">Tiny House (Unit 10A)</p>
                   <p className="text-lg font-bold text-blue-800">
                     ${electricityResults.totalBillTinyHouse.toFixed(2)}
                   </p>
@@ -245,7 +245,7 @@ function App() {
 
             <div>
               <label className="block text-sm font-semibold text-slate-700 mb-2">
-                Unit 10B Water Submeter (Cubic Meter)
+                Unit 10B Water Submeter
               </label>
               <input
                 type="number"
@@ -266,13 +266,13 @@ function App() {
 
               <div className="grid grid-cols-2 gap-3 mb-3">
                 <div className="bg-emerald-50 border-2 border-emerald-200 rounded-xl p-3">
-                  <p className="text-xs text-emerald-700 font-medium mb-1">Big House</p>
+                  <p className="text-xs text-emerald-700 font-medium mb-1">Big House (Unit 10)</p>
                   <p className="text-lg font-bold text-emerald-800">
                     ${waterResults.totalBillBigHouse.toFixed(2)}
                   </p>
                 </div>
                 <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-3">
-                  <p className="text-xs text-blue-700 font-medium mb-1">Tiny House</p>
+                  <p className="text-xs text-blue-700 font-medium mb-1">Tiny House (Unit 10A)</p>
                   <p className="text-lg font-bold text-blue-800">
                     ${waterResults.totalBillTinyHouse.toFixed(2)}
                   </p>
