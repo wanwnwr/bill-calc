@@ -82,7 +82,7 @@ function App() {
 
     if (!isNaN(cubicMeter) && !isNaN(cubicMeter10B)) {
       const totalBill = (cubicMeter - 54.54) * 0.44 + 5.9994;
-      const bill10B = cubicMeter10B * 0.44 + 5.9994;
+      const bill10B = (cubicMeter10B - 54.54) * 0.44 + 5.9994;
 
       const percentageBig = electricityResults.percentageBigHouse || 0;
       const percentageTiny = electricityResults.percentageTinyHouse || 0;
