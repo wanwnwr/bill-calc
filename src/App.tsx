@@ -84,8 +84,8 @@ function App() {
       const totalBill = (cubicMeter - 54.54) * 0.44 + 5.9994;
       const bill10B = (cubicMeter10B - 54.54) * 0.44 + 5.9994;
 
-      const percentageBig = electricityResults.percentageBigHouse;
-      const percentageTiny = electricityResults.percentageTinyHouse;
+      const percentageBig = electricityResults.percentageBigHouse || 0;
+      const percentageTiny = electricityResults.percentageTinyHouse || 0;
 
       const sharedBill = totalBill - bill10B;
       const billBig = percentageBig * sharedBill;
@@ -105,7 +105,7 @@ function App() {
         totalBill10B: 0,
       });
     }
-  }, [totalCubicMeterUsed, totalCubicMeter10B, electricityResults.percentageBigHouse, electricityResults.percentageTinyHouse]);
+  }, [totalCubicMeterUsed, totalCubicMeter10B, electricityResults]);
 
   useEffect(() => {
     const price = parseFloat(debtPrice);
