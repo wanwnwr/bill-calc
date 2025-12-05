@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  vite-app:
+    # Use the 'build' instruction to tell Portainer to build the image
+    # The context points to the current directory (where this file is)
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # Define the container image name after it's built
+    image: bill-calc-local:latest 
+    container_name: bill-calc
+ 
+      
+    restart: unless-stopped
+
+networks:
+      - npm_network
+
+# 3. Define the external network NPM is already using
+networks:
+  npm_network:
+    external: true
+    name: nginxpm
