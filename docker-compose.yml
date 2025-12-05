@@ -15,10 +15,6 @@ services:
     restart: unless-stopped
 
 networks:
-      - npm_network
-
-# 3. Define the external network NPM is already using
-networks:
   npm_network:
     external: true
     name: nginxpm
