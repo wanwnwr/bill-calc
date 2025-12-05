@@ -86,10 +86,11 @@ function App() {
 
       const percentageBig = electricityResults.percentageBigHouse || 0;
       const percentageTiny = electricityResults.percentageTinyHouse || 0;
+      const totalPercentageBigTiny = percentageBig + percentageTiny;
 
       const sharedBill = totalBill - bill10B;
-      const billBig = percentageBig * sharedBill;
-      const billTiny = percentageTiny * sharedBill;
+      const billTiny = totalPercentageBigTiny > 0 ? (percentageTiny / totalPercentageBigTiny) * sharedBill : 0;
+      const billBig = sharedBill - billTiny;
 
       setWaterResults({
         totalBillInDollars: totalBill,
